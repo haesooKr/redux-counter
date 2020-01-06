@@ -5,8 +5,8 @@ const initialState = {
   number: 0
 }
 
-function counter(state = initialState, action){
-  console.log(action);
+export default function counter(state = initialState, action){
+  console.log("action: ", action);
   switch(action.type){
     case types.INCREMENT:
       return {
