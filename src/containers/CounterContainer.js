@@ -3,10 +3,12 @@ import * as actions from '../actions';
 import { connect } from 'react-redux';
 import getRandomColor from '../lib/getRandomColor';
 
-const mapStateToProps = (state) => ({
-  color: state.color,
-  number: state.number
-})
+const mapStateToProps = (state) => (
+  {
+  color: state.colorData.color,
+  number: state.numberData.number
+  }
+)
 
 const mapDisptachToProps = (dispatch) => ({
   onIncrement: () => dispatch(actions.increment()),
